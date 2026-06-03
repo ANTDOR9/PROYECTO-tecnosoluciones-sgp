@@ -8,7 +8,7 @@ class Model {
         $config = require BASE_PATH . '/config/database.php';
         try {
             $this->db = new PDO(
-                "mysql:host={$config['host']};dbname={$config['dbname']};charset=utf8",
+                "mysql:host={$config['host']};port={$config['port']};dbname={$config['dbname']};charset=utf8",
                 $config['user'],
                 $config['password'],
                 [
