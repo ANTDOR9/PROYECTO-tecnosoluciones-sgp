@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $title ?? 'TecnoSoluciones' ?></title>
+    <link rel="icon" type="image/x-icon" href="/PROYECTO-tecnosoluciones-sgp/public/assets/img/favicon.ico">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
     <link href="/PROYECTO-tecnosoluciones-sgp/public/assets/css/login.css" rel="stylesheet">
 </head>
@@ -23,8 +24,9 @@
         <!-- Brand -->
         <div class="brand">
             <img src="/PROYECTO-tecnosoluciones-sgp/public/assets/img/logo.svg" alt="TecnoSoluciones">
-            <h4>TecnoSoluciones</h4>
-            <small>Sistema de Gestion de Proyectos</small>
+            <br>
+            <small>Ingresa tus datos para continuar</small>
+            <br>
         </div>
 
         <!-- Error oculto para JS -->
