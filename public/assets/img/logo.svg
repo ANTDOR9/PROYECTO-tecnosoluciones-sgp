@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50">
+  <!-- Hexagono -->
+  <polygon points="20,5 35,5 43,18 35,31 20,31 12,18" fill="#0d6efd"/>
+  <!-- Letras TS dentro del hexagono -->
+  <text x="17" y="22" font-family="Arial" font-weight="bold" font-size="13" fill="white">TS</text>
+  <!-- Nombre empresa -->
+  <text x="50" y="16" font-family="Arial" font-weight="bold" font-size="13" fill="#1e2a3a">TecnoSoluciones</text>
+  <!-- Subtitulo -->
+  <text x="50" y="29" font-family="Arial" font-size="8" fill="#8a9bb0">Sistema de Gestion de Proyectos</text>
+</svg>
