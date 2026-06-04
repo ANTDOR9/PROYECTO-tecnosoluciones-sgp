@@ -10,17 +10,19 @@ btnToggle.addEventListener('click', () => {
     mainContent.classList.toggle('collapsed');
 });
 
-// Generar particulas
+// Generar particulas intensas
 function createParticles() {
-    const count = 80;
+    const count = 200;
     for (let i = 0; i < count; i++) {
         const particle = document.createElement('div');
         particle.classList.add('particle');
 
-        const size = Math.random() * 5 + 2;
+        const size = Math.random() * 6 + 2;
         const left = Math.random() * 100;
-        const duration = Math.random() * 12 + 6;
-        const delay = Math.random() * 8;
+        const duration = Math.random() * 20 + 10;
+        const delay = Math.random() * 15;
+        const isBlue = Math.random() > 0.4;
+        const color = isBlue ? '100,160,255' : '255,255,255';
 
         particle.style.cssText = `
             width: ${size}px;
@@ -29,9 +31,10 @@ function createParticles() {
             bottom: -10px;
             animation-duration: ${duration}s;
             animation-delay: -${delay}s;
-            opacity: ${Math.random() * 0.6 + 0.3};
-            background: rgba(${Math.random() > 0.5 ? '100,160,255' : '255,255,255'}, 0.8);
-            box-shadow: 0 0 ${size * 2}px rgba(100,160,255,0.6);
+            opacity: ${Math.random() * 0.7 + 0.3};
+            background: rgba(${color}, 0.9);
+            box-shadow: 0 0 ${size * 3}px rgba(${color}, 0.8),
+                        0 0 ${size * 6}px rgba(${color}, 0.4);
         `;
 
         document.body.appendChild(particle);

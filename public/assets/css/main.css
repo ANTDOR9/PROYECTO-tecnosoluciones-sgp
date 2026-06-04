@@ -630,3 +630,11 @@ body::after {
     background: rgba(255,255,255,0.2) !important;
     color: #fff !important;
 }
+
+/* Particulas llegan casi al tope */
+@keyframes floatUp {
+    0%   { transform: translateY(0) scale(0.5); opacity: 0; }
+    5%   { opacity: 1; }
+    85%  { opacity: 0.6; }
+    100% { transform: translateY(-98vh) scale(1.2); opacity: 0; }
+}
