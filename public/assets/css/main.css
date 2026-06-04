@@ -576,3 +576,57 @@ body::after {
     color: #fff !important;
     font-weight: 600;
 }
+
+/* =====================
+   AJUSTES VISUALES v2
+===================== */
+
+/* Cards mas transparentes estilo login */
+.card, .kpi-card {
+    background: rgba(26, 29, 46, 0.55) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255,255,255,0.1) !important;
+}
+
+/* Tabla interior de cards - quitar fondo blanco */
+.table {
+    background: transparent !important;
+}
+
+.card .card-body, .card .card-header {
+    background: transparent !important;
+}
+
+/* Textos "Este mes", "Total" mejor contraste */
+.card-header small,
+.text-muted {
+    color: rgba(255,255,255,0.6) !important;
+}
+
+/* Avatar btn mas claro */
+.avatar-btn {
+    background: rgba(255,255,255,0.15) !important;
+    border: 1px solid rgba(255,255,255,0.25) !important;
+}
+
+.avatar-btn span {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+}
+
+.avatar-btn small {
+    color: rgba(255,255,255,0.75) !important;
+}
+
+/* Topbar icons mas visibles */
+.topbar-icon-btn {
+    background: rgba(255,255,255,0.1) !important;
+    border: 1px solid rgba(255,255,255,0.2) !important;
+    color: rgba(255,255,255,0.8) !important;
+}
+
+.topbar-icon-btn:hover {
+    background: rgba(255,255,255,0.2) !important;
+    color: #fff !important;
+}
