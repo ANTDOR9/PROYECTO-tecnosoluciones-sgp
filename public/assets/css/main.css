@@ -475,3 +475,104 @@ body {
 ::-webkit-scrollbar-track { background: var(--bg-primary); }
 ::-webkit-scrollbar-thumb { background: var(--bg-hover); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--text-secondary); }
+
+/* =====================
+   FONDO CIUDAD + PARTICULAS
+===================== */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/PROYECTO-tecnosoluciones-sgp/public/assets/img/Fadmin.jpg') center center / cover no-repeat;
+    z-index: -3;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 15, 25, 0.82);
+    z-index: -2;
+}
+
+/* Particulas */
+.particle {
+    position: fixed;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    animation: floatUp linear infinite;
+    z-index: -1;
+    pointer-events: none;
+}
+
+@keyframes floatUp {
+    0%   { transform: translateY(100vh) scale(0); opacity: 0; }
+    10%  { opacity: 1; }
+    90%  { opacity: 0.5; }
+    100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+}
+
+/* Cards con blur para contrastar con fondo */
+.card, .kpi-card {
+    background: rgba(26, 29, 46, 0.85) !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+/* Sidebar con blur */
+.sidebar {
+    background: rgba(26, 29, 46, 0.92) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Topbar con blur */
+.topbar {
+    background: rgba(26, 29, 46, 0.92) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Logo centrado en sidebar */
+.sidebar-brand {
+    justify-content: center;
+    padding: 18px 12px;
+}
+
+.sidebar-brand img.logo-full {
+    height: 38px;
+    width: auto;
+    max-width: 160px;
+    object-fit: contain;
+}
+
+/* Avatar admin contraste */
+.avatar-btn {
+    background: rgba(255,255,255,0.08) !important;
+    border-color: rgba(255,255,255,0.15) !important;
+}
+
+.avatar-btn span {
+    color: #fff !important;
+}
+
+.avatar-btn small {
+    color: rgba(255,255,255,0.6) !important;
+}
+
+/* Nav labels contraste */
+.nav-section-label {
+    color: rgba(255,255,255,0.4) !important;
+}
+
+/* Topbar title */
+.topbar-title {
+    color: #fff !important;
+    font-weight: 600;
+}
