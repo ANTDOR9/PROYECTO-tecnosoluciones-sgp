@@ -86,6 +86,22 @@
             </div>
         </div>
 
+        <!-- KPI 5: Equipo Activo -->
+        <div class="kpi-card" data-index="4">
+            <div class="kpi-bg" style="background: linear-gradient(135deg, #0dcaf0, #0d6efd);"></div>
+            <div class="kpi-overlay"></div>
+            <div class="kpi-content">
+                <div class="kpi-icon">
+                    <i class="bi bi-person-badge-fill" style="color:#fff;"></i>
+                </div>
+                <div class="kpi-info">
+                    <div class="label">Equipo Activo</div>
+                    <div class="value">0</div>
+                    <div class="sub">Trabajadores disponibles</div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <button class="kpi-arrow right" onclick="kpiMove(1)">
@@ -97,6 +113,7 @@
         <button class="kpi-dot" onclick="kpiGoTo(1)"></button>
         <button class="kpi-dot" onclick="kpiGoTo(2)"></button>
         <button class="kpi-dot" onclick="kpiGoTo(3)"></button>
+        <button class="kpi-dot" onclick="kpiGoTo(4)"></button>
     </div>
 </div>
 

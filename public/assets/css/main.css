@@ -515,3 +515,145 @@ body {
     margin-top: -100px;  /* -altura/2 */
     margin-left: -23%;   /* -ancho/2 */
 }
+
+/* =====================
+   FONDO CIUDAD + PARTICULAS
+===================== */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/PROYECTO-tecnosoluciones-sgp/public/assets/img/Fadmin.jpg') center center / cover no-repeat;
+    z-index: -3;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 15, 25, 0.82);
+    z-index: -2;
+}
+
+.particle {
+    position: fixed;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    animation: floatUp linear infinite;
+    z-index: -1;
+    pointer-events: none;
+}
+
+@keyframes floatUp {
+    0%   { transform: translateY(0) scale(0.5); opacity: 0; }
+    5%   { opacity: 1; }
+    85%  { opacity: 0.6; }
+    100% { transform: translateY(-98vh) scale(1.2); opacity: 0; }
+}
+
+/* AJUSTE: coverflow mas compacto y centrado */
+.kpi-card {
+    width: 38% !important;
+    margin-left: -19% !important;
+}
+
+.kpi-card.position-left {
+    transform: translateX(-95%) translateZ(-180px) rotateY(35deg) scale(0.78) !important;
+}
+
+.kpi-card.position-right {
+    transform: translateX(95%) translateZ(-180px) rotateY(-35deg) scale(0.78) !important;
+}
+
+.kpi-card.position-far-left {
+    transform: translateX(-160%) translateZ(-320px) rotateY(35deg) scale(0.6) !important;
+}
+
+.kpi-card.position-far-right {
+    transform: translateX(160%) translateZ(-320px) rotateY(-35deg) scale(0.6) !important;
+}
+
+/* AJUSTE FINAL: KPI coverflow compacto, sin desborde */
+.kpi-coverflow {
+    height: 180px !important;
+    overflow: hidden !important;
+}
+
+.kpi-card {
+    width: 26% !important;
+    height: 140px !important;
+    margin-left: -13% !important;
+    margin-top: -70px !important;
+}
+
+.kpi-card.position-left {
+    transform: translateX(-105%) translateZ(-120px) rotateY(35deg) scale(0.75) !important;
+}
+
+.kpi-card.position-right {
+    transform: translateX(105%) translateZ(-120px) rotateY(-35deg) scale(0.75) !important;
+}
+
+.kpi-card.position-far-left {
+    transform: translateX(-180%) translateZ(-250px) rotateY(35deg) scale(0.55) !important;
+    opacity: 0.25 !important;
+}
+
+.kpi-card.position-far-right {
+    transform: translateX(180%) translateZ(-250px) rotateY(-35deg) scale(0.55) !important;
+    opacity: 0.25 !important;
+}
+
+.kpi-icon {
+    width: 44px !important;
+    height: 44px !important;
+    font-size: 1.3rem !important;
+}
+
+.kpi-info .value {
+    font-size: 1.9rem !important;
+}
+
+.kpi-info .label {
+    font-size: 0.8rem !important;
+}
+
+.kpi-info .sub {
+    font-size: 0.7rem !important;
+}
+
+/* AJUSTE: tarjetas KPI mas verticales */
+.kpi-coverflow {
+    height: 240px !important;
+}
+
+.kpi-card {
+    width: 20% !important;
+    height: 200px !important;
+    margin-left: -10% !important;
+    margin-top: -100px !important;
+}
+
+.kpi-card.position-left {
+    transform: translateX(-115%) translateZ(-120px) rotateY(35deg) scale(0.75) !important;
+}
+
+.kpi-card.position-right {
+    transform: translateX(115%) translateZ(-120px) rotateY(-35deg) scale(0.75) !important;
+}
+
+.kpi-card.position-far-left {
+    transform: translateX(-210%) translateZ(-250px) rotateY(35deg) scale(0.55) !important;
+    opacity: 0.25 !important;
+}
+
+.kpi-card.position-far-right {
+    transform: translateX(210%) translateZ(-250px) rotateY(-35deg) scale(0.55) !important;
+    opacity: 0.25 !important;
+}
