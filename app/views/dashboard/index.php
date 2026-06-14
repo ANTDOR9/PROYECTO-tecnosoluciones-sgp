@@ -29,7 +29,7 @@
                 </div>
                 <div class="kpi-info">
                     <div class="label">Total Clientes</div>
-                    <div class="value">0</div>
+                    <div class="value"><?= $totalClientes ?></div>
                     <div class="sub">Registrados en el sistema</div>
                 </div>
             </div>
@@ -46,7 +46,7 @@
                 </div>
                 <div class="kpi-info">
                     <div class="label">Total Proyectos</div>
-                    <div class="value">0</div>
+                    <div class="value"><?= $totalProyectos ?></div>
                     <div class="sub">Activos e inactivos</div>
                 </div>
             </div>
@@ -163,13 +163,23 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <?php if (empty($proyectosRecientes)): ?>
                         <tr>
-                            <td colspan="4" class="text-center py-4" 
-                                style="color:var(--text-secondary);">
+                            <td colspan="4" class="text-center py-4" style="color:var(--text-secondary);">
                                 <i class="bi bi-inbox fs-4 d-block mb-2"></i>
                                 Sin proyectos registrados aun
                             </td>
                         </tr>
+                        <?php else: ?>
+                            <?php foreach ($proyectosRecientes as $p): ?>
+                            <tr>
+                                <td><strong><?= htmlspecialchars($p["nombre"]) ?></strong></td>
+                                <td><?= htmlspecialchars($p["cliente_nombre"]) ?></td>
+                                <td><span class="badge-estado badge-<?= $p["estado"] ?>"><?= ucfirst(str_replace("_", " ", $p["estado"])) ?></span></td>
+                                <td>$<?= number_format($p["presupuesto"], 2) ?></td>
+                            </tr>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
                     </tbody>
                 </table>
             </div>
@@ -257,7 +267,7 @@ new Chart(ctx1, {
         labels: ['Pendiente', 'En Progreso', 'Completado', 'Cancelado'],
         datasets: [{
             label: 'Proyectos',
-            data: [0, 0, 0, 0],
+            data: [<?= $proyectosPendientes ?>, <?= $proyectosEnProgreso ?>, <?= $proyectosCompletados ?>, <?= $proyectosCancelados ?>],
             backgroundColor: [
                 'rgba(255,193,7,0.8)',
                 'rgba(13,110,253,0.8)',
