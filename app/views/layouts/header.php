@@ -59,6 +59,13 @@
             <span>Tickets</span>
         </a>
 
+        <a href="/PROYECTO-tecnosoluciones-sgp/public/workers"
+           class="nav-item <?= ($active ?? '') == 'workers' ? 'active' : '' ?>"
+           data-label="Trabajadores">
+            <i class="bi bi-person-badge"></i>
+            <span>Trabajadores</span>
+        </a>
+
         <div class="nav-section-label">Reportes</div>
 
         <a href="/PROYECTO-tecnosoluciones-sgp/public/reports"

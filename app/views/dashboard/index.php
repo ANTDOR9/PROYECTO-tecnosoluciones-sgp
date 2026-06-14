@@ -80,7 +80,7 @@
                 </div>
                 <div class="kpi-info">
                     <div class="label">Tareas Pendientes</div>
-                    <div class="value">0</div>
+                    <div class="value"><?= $tareasPendientes ?></div>
                     <div class="sub">Por completar</div>
                 </div>
             </div>
@@ -96,7 +96,7 @@
                 </div>
                 <div class="kpi-info">
                     <div class="label">Equipo Activo</div>
-                    <div class="value">0</div>
+                    <div class="value"><?= $equipoActivo ?></div>
                     <div class="sub">Trabajadores disponibles</div>
                 </div>
             </div>
